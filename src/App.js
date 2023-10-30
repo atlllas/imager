@@ -26,7 +26,9 @@ function App() {
     const handleKeyDown = (e) => {
       if (e.code === 'Space') {
         handleImageClick();
-      }
+      } else if (e.code === 'ArrowLeft') {
+        setCurrentIndex((prevIndex) => prevIndex === 0 ? imageList.length - 1 : prevIndex - 1);
+      }    
     };
 
     document.addEventListener('keydown', handleKeyDown);
